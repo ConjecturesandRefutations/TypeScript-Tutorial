@@ -1,12 +1,14 @@
-const character = 'alfie';
+let character = 'Alfie'
+let age = 30;
+let isBlackBelt = false;
 
-console.log(character);
+//character = 20 gives an error because TypeScript is strict on not changing types
+character = 'Bob';
 
-const inputs = document.querySelectorAll('input');
+isBlackBelt = true;
 
-inputs.forEach(input => {
-  console.log(inputs);
-});
+const circ = (diameter: number) => {
+  return diameter * Math.PI
+} 
 
-inputs.forEach(input=> { console.log(input)
-});
+console.log(circ(7.5))
