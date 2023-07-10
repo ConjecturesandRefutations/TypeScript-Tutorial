@@ -86,3 +86,25 @@ ninjaTwo = {
   age: 20,
   beltColour: 'black'
 }
+
+//any types
+
+let ageTwo: any = 25;
+
+ageTwo = true;
+ageTwo = 'hello';
+
+// Be wary of using 'any' types. Essentially they remove a lot of the benefits of TypeScript, effectively becoming like JavaScript.
+
+let mixedThree: any[] = [];
+
+mixedThree.push(5);
+mixedThree.push('mario');
+mixedThree.push(false);
+//console.log(mixedThree);
+
+let ninjaThree: { name: any, age: any };
+
+ninjaThree = { name: 'Alfie', age: 30 };
+
+//console.log(ninjaThree);
