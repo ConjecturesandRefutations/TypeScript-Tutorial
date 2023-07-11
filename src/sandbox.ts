@@ -151,3 +151,32 @@ const logDetails = (uid: StringOrNum, item: string) => {
 const greetTwo = (user: objWithName) => {
   console.log(`${user.name} says hello`);
 }
+
+//***FUNCTION SIGNATURES ***/
+
+
+//example 1
+let greetThree: (a: string, b: string) => void;
+greet = (name: string, greeting: string) => {
+  console.log(`${name} says ${greeting}`);
+}
+
+//example 2
+let calc: (a: number, b: number, c: string) => number;
+
+calc = (numOne: number, numTwo: number, action: string) =>{
+  if (action === 'add'){
+    return numOne + numTwo
+  } else {
+    return numOne - numTwo;
+  }
+}
+
+//example 3
+let logDetailsTwo: (obj: {name: string, age: number}) => void;
+
+type person = {name: string, age: number}
+
+logDetailsTwo = (ninja: person) => {
+  console.log(`${ninja.name} is ${ninja.age} years old`);
+}
