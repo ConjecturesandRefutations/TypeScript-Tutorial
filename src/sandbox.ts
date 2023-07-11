@@ -87,7 +87,7 @@ ninjaTwo = {
   beltColour: 'black'
 }
 
-//any types
+//***ANY TYPES***
 
 let ageTwo: any = 25;
 
@@ -108,3 +108,46 @@ let ninjaThree: { name: any, age: any };
 ninjaThree = { name: 'Alfie', age: 30 };
 
 //console.log(ninjaThree);
+
+//***FUNCTION BASICS***
+
+/* let greet = () => {
+  console.log('hello, world');
+}
+
+greet = 'Hello' - Not allowed, because we implicitly declared that `greet` is a function
+
+*/
+
+let greet: Function;
+
+greet = () => {
+  console.log('hello, again')
+} // This is allowed because we have already explicitly declared that `greet` is a function
+
+const add = (a: number, b: number, c?: number | string) => {
+  console.log(a+b);
+  console.log(c);
+} 
+
+add(5,10);
+
+const minus=(a: number, b: number) => {
+  return a+b;
+}
+
+let result = minus(10,7);
+
+
+//***TYPE ALIASES***
+
+type StringOrNum = string | number;
+type objWithName = { name: string, uid: StringOrNum }
+
+const logDetails = (uid: StringOrNum, item: string) => {
+  console.log(`${item} has a uid of ${uid}`);
+}
+
+const greetTwo = (user: objWithName) => {
+  console.log(`${user.name} says hello`);
+}
